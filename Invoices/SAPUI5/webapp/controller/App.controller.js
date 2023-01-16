@@ -1,7 +1,7 @@
 // @ts-nocheck
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
+    "sap/m/MessageToast"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -11,8 +11,8 @@ sap.ui.define([
         "use strict"
 
         return Controller.extend("logaligroup.SAPUI5.controller.App", {
-            onInit: function () {
-               
+            onInit: function () {                
+
             },
 
             onShowHello: function () {
