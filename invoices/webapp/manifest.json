@@ -1,7 +1,7 @@
 {
   "_version": "1.48.0",
   "sap.app": {
-    "id": "logaligroup.SAPUI5",
+    "id": "logaligroup.invoices",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,16 +12,17 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
-      "version": "1.8.3",
-      "toolsId": "ec3d50b3-3320-47dd-8610-467651941bca"
+      "version": "1.8.5",
+      "toolsId": "b1b08ec1-bca9-48a3-9eae-7f2e42378022"
     },
     "dataSources": {
       "mainService": {
-        "uri": "Northwind/V2/Northwind/Northwind.svc/",
+        "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
-          "odataVersion": "2.0",
-          "localUri": "localService/metadata.xml"
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
         }
       }
     }
@@ -45,7 +46,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.109.3",
+      "minUI5Version": "1.108.4",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -65,7 +66,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "logaligroup.SAPUI5.i18n.i18n"
+          "bundleName": "logaligroup.invoices.i18n.i18n"
         }
       },
       "invoices": {
@@ -94,7 +95,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "logaligroup.SAPUI5.view",
+        "viewPath": "logaligroup.invoices.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -109,7 +110,7 @@
         }
       ],
       "targets": {
-        "TargetView1": {
+        "TargetApp": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
@@ -119,7 +120,7 @@
       }
     },
     "rootView": {
-      "viewName": "logaligroup.SAPUI5.view.App",
+      "viewName": "logaligroup.invoices.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

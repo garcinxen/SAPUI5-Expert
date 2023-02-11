@@ -1,7 +1,7 @@
 // @ts-nocheck
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "logaligroup/SAPUI5/model/Models",
+    "logaligroup/invoices/model/Models",
     "sap/ui/model/resource/ResourceModel",
     "./controller/HelloDialog" /** se usa ./ porque lo definimos en el resourceroots del index.html  */
 ],
@@ -12,7 +12,7 @@ sap.ui.define([
 
     function (UIComponent, Models, ResourceModel, HelloDialog) {
 
-        return UIComponent.extend("logaligroup.SAPUI5.Component", {
+        return UIComponent.extend("logaligroup.invoices.Component", {
 
             metadata: {
                 manifest: "json"
@@ -26,7 +26,7 @@ sap.ui.define([
                 this.setModel(Models.createRecipient());
 
                 //set i18n model on the view
-                var i18nModel = new ResourceModel({ bundleName: "logaligroup.SAPUI5.i18n.i18n" });
+                var i18nModel = new ResourceModel({ bundleName: "logaligroup.invoices.i18n.i18n" });
                 this.setModel(i18nModel, "i18n");
 
                 this._helloDialog = new HelloDialog(this.getRootControl());
