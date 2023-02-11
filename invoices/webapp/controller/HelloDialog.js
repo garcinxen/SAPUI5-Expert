@@ -8,7 +8,7 @@ sap.ui.define([
     * @param {typeof sap.ui.core.Fragment} Fragment
     */
     function(ManagedObject, Fragment){
-        "use strict"
+        "use strict";
 
         return ManagedObject.extend("logaligroup.invoices.controller.HelloDialog", {
 

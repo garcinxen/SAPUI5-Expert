@@ -6,11 +6,11 @@ sap.ui.define([
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
     function (Controller) {
-        "use strict"
+        "use strict";
 
         return Controller.extend("logaligroup.invoices.controller.App", {
             onInit: function () {                
-
+                this.getView().addStyleClass(this-this.getOwnerComponent().getContentDensityClass());
             },
 
             onOpenDialogHeader: function () {

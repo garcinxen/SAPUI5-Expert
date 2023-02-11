@@ -13,7 +13,7 @@ sap.ui.define([
      * @param {typeof sap.ui.model.FilterOperator} FilterOperator
      */
     function (Controller, JSONModel, InvoicesFormatter, Filter, FilterOperator) {
-        "use strict"
+        "use strict";
 
         return Controller.extend("logaligroup.invoices.controller.InvoicesList", {
             formatter: InvoicesFormatter,
@@ -38,6 +38,14 @@ sap.ui.define([
                 const oList = this.getView().byId("invoiceList");
                 const oBinding = oList.getBinding("items");
                 oBinding.filter(aFilter);
+            },
+
+            navigateToDetails: function(oEvent){
+                const oItem = oEvent.getSource();
+                const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo("Details", {
+                    invoicePath: window.encodeURIComponent(oItem.getBindingContext("northwind").getPath().substr(1))
+                });
             }
         });
     });

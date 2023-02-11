@@ -7,17 +7,19 @@
     <Panel id="panel1" 
            headerText="{i18n>helloPanel}"
            class="sapUiResponsiveMargin"
-           width="auto">
+           width="auto"
+           expandable="{device>/system/phone}"
+           expanded="{= !${device>/system/phone}}">
         <content>
             <Button id="btnDialog"
                     text="{i18n>helloDialogBtn}"
                     press=".onOpenDialog"
-                    class="sapUiSmallMarginEnd"
+                    class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"
                     icon="sap-icon://action" />
             <Button id="btn1" 
                     text="{i18n>showHelloButtonText}" 
                     press=".onShowHello"
-                    class="sapUiSmallMarginEnd" />
+                    class="sapUiSmallMarginEnd sapUiHideOnDesktop" />
             <Input id="inp1" 
                    value="{/recipient/name}" 
                    width="60%" 
